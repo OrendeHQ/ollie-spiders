@@ -25,7 +25,7 @@ def main(argv):
             f = csv.writer(open(outputfile, 'wb+'))
             f.writerow(['No', 'Product Name', 'Price (SGD)'])
             for idx, item in enumerate(items):
-                f.writerow([idx, unicode(item['product_name']).encode("utf-8").strip(), item['price'].strip()])
+                f.writerow([idx, unicode(item['product_name']).encode("utf-8").strip(), item['price']])
            
 if __name__ == "__main__":
    main(sys.argv[1:])
